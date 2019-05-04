@@ -10,4 +10,16 @@
     <attr path="/api/package[@name='com.xwray.groupie']" name="managedName">
         Xwray.Groupie
     </attr>
+
+    <attr
+        path="/api/package[@name='com.xwray.groupie']/class[@name='GroupAdapter']/method[@name='onFailedToRecycleView' and count(parameter)=1 and parameter[1][@type='VH']]/parameter[1]"
+        name="managedType">
+        Android.Support.V7.Widget.RecyclerView.ViewHolder
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.xwray.groupie']/class[@name='GroupAdapter']/method[@name='onViewRecycled' and count(parameter)=1 and parameter[1][@type='VH']]/parameter[1]"
+        name="managedType">
+        Android.Support.V7.Widget.RecyclerView.ViewHolder
+    </attr>
 </metadata>
