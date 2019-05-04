@@ -3,22 +3,30 @@ using Android.App;
 using Android.OS;
 using Android.Support.Design.Widget;
 using Android.Support.V7.App;
+using Android.Support.V7.Widget;
 using Android.Views;
-using Android.Widget;
+using Xwray.Groupie;
 
 namespace Sample
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+        private GroupAdapter _groupAdapter = new GroupAdapter();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
-
-            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
+
+            _groupAdapter.Add(new ListItem("title"));
+            var recyclerView = FindViewById<RecyclerView>(Resource.Id.recycler_view);
+            var manager = new GridLayoutManager(this, _groupAdapter.SpanCount);
+            manager.SetSpanSizeLookup(_groupAdapter.SpanSizeLookup);
+            recyclerView.SetLayoutManager(manager);
+            recyclerView.SetAdapter(_groupAdapter);
 
             FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
