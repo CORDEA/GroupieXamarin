@@ -12,6 +12,21 @@
     </attr>
 
     <attr
+        path="/api/package[@name='com.xwray.groupie']/class[@name='GroupAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
+        name="visibility">
+        internal
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.xwray.groupie']/class[@name='GroupAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
+        name="name">
+        InternalCreateViewHolder
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='com.xwray.groupie']/class[@name='GroupAdapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='VH'] and parameter[2][@type='int']]" />
+
+    <attr
         path="/api/package[@name='com.xwray.groupie']/class[@name='GroupAdapter']/method[@name='onFailedToRecycleView' and count(parameter)=1 and parameter[1][@type='VH']]/parameter[1]"
         name="managedType">
         Android.Support.V7.Widget.RecyclerView.ViewHolder
