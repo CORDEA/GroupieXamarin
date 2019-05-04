@@ -1,4 +1,5 @@
-﻿using Android.Support.V7.Widget;
+﻿using System;
+using Android.Support.V7.Widget;
 using Android.Views;
 
 namespace Xwray.Groupie
@@ -7,12 +8,12 @@ namespace Xwray.Groupie
     {
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            // Do nothing here because original source does nothing.
+            throw new NotImplementedException();
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
-            return (RecyclerView.ViewHolder) InternalCreateViewHolder(parent, viewType);
+            throw new NotImplementedException();
         }
     }
 }
