@@ -12,7 +12,7 @@ namespace Sample
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        private GroupAdapter _groupAdapter = new GroupAdapter();
+        private readonly GroupAdapter _groupAdapter = new GroupAdapter();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {

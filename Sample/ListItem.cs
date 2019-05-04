@@ -6,7 +6,7 @@ namespace Sample
 {
     public class ListItem : Item
     {
-        private string _title;
+        private readonly string _title;
 
         public ListItem(string title)
         {
