@@ -22,6 +22,10 @@ namespace Sample
             SetSupportActionBar(toolbar);
 
             _groupAdapter.Add(new ListItem("title"));
+            var group = new ExpandableGroup(new ExpandableHeaderItem("expandable item"));
+            group.Add(new ExpandableContentItem("description"));
+            group.Add(new ExpandableContentItem("description"));
+            _groupAdapter.Add(group);
             var recyclerView = FindViewById<RecyclerView>(Resource.Id.recycler_view);
             var manager = new GridLayoutManager(this, _groupAdapter.SpanCount);
             manager.SetSpanSizeLookup(_groupAdapter.SpanSizeLookup);
