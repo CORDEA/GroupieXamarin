@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Android.App;
 using Android.OS;
 using Android.Support.Design.Widget;
@@ -26,6 +27,15 @@ namespace Sample
             group.Add(new ExpandableContentItem("description"));
             group.Add(new ExpandableContentItem("description"));
             _groupAdapter.Add(group);
+            var childItems = new List<IGroup>
+            {
+                new CarouselChildItem("carousel1"),
+                new CarouselChildItem("carousel2"),
+                new CarouselChildItem("carousel3"),
+            };
+            var carousel = new CarouselItem("carousel", childItems);
+            _groupAdapter.Add(carousel);
+
             var recyclerView = FindViewById<RecyclerView>(Resource.Id.recycler_view);
             var manager = new GridLayoutManager(this, _groupAdapter.SpanCount);
             manager.SetSpanSizeLookup(_groupAdapter.SpanSizeLookup);
