@@ -46,4 +46,28 @@
         name="name">
         onToggleListener
     </attr>
+
+    <attr
+        path="/api/package[@name='com.xwray.groupie']/interface[@name='OnItemClickListener']/method[@name='onItemClick' and count(parameter)=2 and parameter[1][@type='com.xwray.groupie.Item'] and parameter[2][@type='android.view.View']]/parameter[1]"
+        name="name">
+        item
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.xwray.groupie']/interface[@name='OnItemClickListener']/method[@name='onItemClick' and count(parameter)=2 and parameter[1][@type='com.xwray.groupie.Item'] and parameter[2][@type='android.view.View']]/parameter[2]"
+        name="name">
+        view
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.xwray.groupie']/interface[@name='OnItemLongClickListener']/method[@name='onItemLongClick' and count(parameter)=2 and parameter[1][@type='com.xwray.groupie.Item'] and parameter[2][@type='android.view.View']]/parameter[1]"
+        name="name">
+        item
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.xwray.groupie']/interface[@name='OnItemLongClickListener']/method[@name='onItemLongClick' and count(parameter)=2 and parameter[1][@type='com.xwray.groupie.Item'] and parameter[2][@type='android.view.View']]/parameter[2]"
+        name="name">
+        view
+    </attr>
 </metadata>
