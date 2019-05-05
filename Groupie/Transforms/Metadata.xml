@@ -28,4 +28,22 @@
         name="managedType">
         Android.Support.V7.Widget.RecyclerView.ViewHolder
     </attr>
+
+    <attr
+        path="/api/package[@name='com.xwray.groupie']/class[@name='Item']/method[@name='bind' and count(parameter)=2 and parameter[1][@type='VH'] and parameter[2][@type='int']]/parameter[1]"
+        name="name">
+        holder
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.xwray.groupie']/class[@name='Item']/method[@name='bind' and count(parameter)=2 and parameter[1][@type='VH'] and parameter[2][@type='int']]/parameter[2]"
+        name="name">
+        position
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.xwray.groupie']/interface[@name='ExpandableItem']/method[@name='setExpandableGroup' and count(parameter)=1 and parameter[1][@type='com.xwray.groupie.ExpandableGroup']]/parameter[1]"
+        name="name">
+        onToggleListener
+    </attr>
 </metadata>

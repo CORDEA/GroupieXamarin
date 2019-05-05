@@ -16,9 +16,9 @@ namespace Sample
 
         public override int Layout => Resource.Layout.expandable_content_item;
 
-        public override void Bind(Object p0, int p1)
+        public override void Bind(Object holder, int position)
         {
-            var viewHolder = (ViewHolder) p0;
+            var viewHolder = (ViewHolder) holder;
             var description = viewHolder.Root.FindViewById<TextView>(Resource.Id.description);
             description.Text = _description;
         }

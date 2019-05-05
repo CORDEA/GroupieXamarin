@@ -7,7 +7,7 @@ namespace Sample
 {
     public class ExpandableHeaderItem : Item, IExpandableItem, View.IOnClickListener
     {
-        private ExpandableGroup _expandableGroup;
+        private ExpandableGroup _onToggleListener;
         private readonly string _title;
 
         public ExpandableHeaderItem(string title)
@@ -17,22 +17,22 @@ namespace Sample
 
         public override int Layout => Resource.Layout.expandable_header_item;
 
-        public override void Bind(Object p0, int p1)
+        public override void Bind(Object holder, int position)
         {
-            var viewHolder = (ViewHolder) p0;
+            var viewHolder = (ViewHolder) holder;
             viewHolder.Root.SetOnClickListener(this);
             var title = viewHolder.Root.FindViewById<TextView>(Resource.Id.title);
             title.Text = _title;
         }
 
-        public void SetExpandableGroup(ExpandableGroup p0)
+        public void SetExpandableGroup(ExpandableGroup onToggleListener)
         {
-            _expandableGroup = p0;
+            _onToggleListener = onToggleListener;
         }
 
         public void OnClick(View v)
         {
-            _expandableGroup.OnToggleExpanded();
+            _onToggleListener.OnToggleExpanded();
         }
     }
 }

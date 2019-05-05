@@ -15,9 +15,9 @@ namespace Sample
 
         public override int Layout => Resource.Layout.list_item;
 
-        public override void Bind(Object p0, int p1)
+        public override void Bind(Object holder, int position)
         {
-            var viewHolder = (ViewHolder) p0;
+            var viewHolder = (ViewHolder) holder;
             var title = viewHolder.Root.FindViewById<TextView>(Resource.Id.title);
             title.Text = _title;
         }
