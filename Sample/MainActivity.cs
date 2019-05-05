@@ -6,12 +6,14 @@ using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Views;
+using Android.Widget;
 using Xwray.Groupie;
+using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace Sample
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity
+    public class MainActivity : AppCompatActivity, IOnItemClickListener, IOnItemLongClickListener
     {
         private readonly GroupAdapter _groupAdapter = new GroupAdapter();
 
@@ -48,6 +50,8 @@ namespace Sample
             manager.SetSpanSizeLookup(_groupAdapter.SpanSizeLookup);
             recyclerView.SetLayoutManager(manager);
             recyclerView.SetAdapter(_groupAdapter);
+            _groupAdapter.SetOnItemClickListener(this);
+            _groupAdapter.SetOnItemLongClickListener(this);
 
             FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
@@ -58,6 +62,17 @@ namespace Sample
             View view = (View) sender;
             Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
                 .SetAction("Action", (View.IOnClickListener) null).Show();
+        }
+
+        public void OnItemClick(Item item, View view)
+        {
+            Toast.MakeText(this, "Clicked", ToastLength.Short).Show();
+        }
+
+        public bool OnItemLongClick(Item item, View view)
+        {
+            Toast.MakeText(this, "Long clicked", ToastLength.Short).Show();
+            return true;
         }
     }
 }
