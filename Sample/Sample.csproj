@@ -66,6 +66,7 @@
     <Compile Include="ExpandableContentItem.cs" />
     <Compile Include="CarouselItem.cs" />
     <Compile Include="CarouselChildItem.cs" />
+    <Compile Include="ListSection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

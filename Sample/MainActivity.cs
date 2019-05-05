@@ -35,6 +35,13 @@ namespace Sample
             };
             var carousel = new CarouselItem("carousel", childItems);
             _groupAdapter.Add(carousel);
+            var section = new ListSection();
+            section.Update(new List<IGroup>
+            {
+                new ListItem("section1"),
+                new ListItem("section2")
+            });
+            _groupAdapter.Add(section);
 
             var recyclerView = FindViewById<RecyclerView>(Resource.Id.recycler_view);
             var manager = new GridLayoutManager(this, _groupAdapter.SpanCount);
