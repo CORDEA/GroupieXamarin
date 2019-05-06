@@ -101,10 +101,10 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
     <AndroidResource Include="Resources\layout\list_item.axml" />
-    <AndroidResource Include="Resources\layout\expandable_header_item.xml" />
-    <AndroidResource Include="Resources\layout\expandable_content_item.xml" />
-    <AndroidResource Include="Resources\layout\carousel_item.xml" />
-    <AndroidResource Include="Resources\layout\carousel_child_item.xml" />
+    <AndroidResource Include="Resources\layout\expandable_header_item.axml" />
+    <AndroidResource Include="Resources\layout\expandable_content_item.axml" />
+    <AndroidResource Include="Resources\layout\carousel_item.axml" />
+    <AndroidResource Include="Resources\layout\carousel_child_item.axml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
