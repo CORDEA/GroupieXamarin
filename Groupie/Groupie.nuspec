@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Xwray.Groupie</id>
+    <version>2.1.0</version>
+    <authors>Yoshihiro Tanaka</authors>
+    <owners>cordea</owners>
+    <licenseUrl>https://github.com/CORDEA/GroupieXamarin/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/CORDEA/GroupieXamarin</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Xamarin bindings library for the groupie library</description>
+    <releaseNotes>https://github.com/CORDEA/GroupieXamarin/releases/tag/2.1.0</releaseNotes>
+    <copyright>Copyright © 2019 Yoshihiro Tanaka</copyright>
+    <tags>groupie RecyclerView</tags>
+    <dependencies>
+      <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="27.0.2.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="./bin/Release/Groupie.dll" target="lib/MonoAndroid" />
+  </files>
+</package>
