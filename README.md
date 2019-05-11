@@ -1,3 +1,5 @@
+[![Nuget](https://img.shields.io/nuget/v/Xwray.Groupie.svg)](https://www.nuget.org/packages/Xwray.Groupie/)
+
 # GroupieXamarin
 
 Xamarin bindings library for the [groupie](https://github.com/lisawray/groupie) library.
